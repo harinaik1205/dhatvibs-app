@@ -3,9 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import DropDown from "./DropDown";
 
 const DROPDOWN_ITEMS = [
-  { id: "1", title: "Product" },
-  { id: "2", title: "Software Services" },
-  { id: "3", title: "IT and Chat Support" },
+  { id: 1, title: "Product", path: "/product" },
+  { id: 2, title: "Software Services", path: "/software" },
+  { id: 3, title: "IT Support", path: "/it-support" },
+  { id: 4, title: "Chat Support", path: "/chat-support" },
 ];
 
 const DesktopNavigation = () => {
@@ -20,7 +21,8 @@ const DesktopNavigation = () => {
         to={"/"}
         className={`${
           pathname === "/" ? "text-blue-500" : ""
-        }  ${baseClassName}`}>
+        }  ${baseClassName}`}
+      >
         Home
       </Link>
       <div className="relative group">
@@ -41,14 +43,16 @@ const DesktopNavigation = () => {
         to={"/about"}
         className={`${
           pathname === "/about" ? "text-blue-500" : ""
-        }  ${baseClassName}`}>
+        }  ${baseClassName}`}
+      >
         About Us
       </Link>
       <Link
         to={"/contact"}
         className={`${
           pathname === "/contact" ? "text-blue-500" : ""
-        }  ${baseClassName}`}>
+        }  ${baseClassName}`}
+      >
         Contact Us
       </Link>
     </nav>
