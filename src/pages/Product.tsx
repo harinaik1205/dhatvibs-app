@@ -35,12 +35,12 @@ const PRODUCT_FEATURES = [
   },
 ];
 
-const PRODUCT_STATS = [
-  { number: "10min", label: "Average Delivery Time" },
-  { number: "24/7", label: "Service Availability" },
-  { number: "500+", label: "Product Categories" },
-  { number: "99%", label: "Customer Satisfaction" },
-];
+// const PRODUCT_STATS = [
+//   { number: "10min", label: "Average Delivery Time" },
+//   { number: "24/7", label: "Service Availability" },
+//   { number: "500+", label: "Product Categories" },
+//   { number: "99%", label: "Customer Satisfaction" },
+// ];
 
 const SoftwareServices = () => {
   return (
