@@ -5,3 +5,16 @@ export interface ServicesType {
   title: string;
   description: string;
 }
+
+export interface NavItemsType {
+  path?: string;
+  label: string;
+  items?: { path: string; label: string };
+}
+
+export interface MessageType {
+  id: number;
+  text: string;
+  sender: "user" | "bot";
+  timestamp: string;
+}

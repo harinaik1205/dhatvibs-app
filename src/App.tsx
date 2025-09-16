@@ -16,12 +16,12 @@ const App = () => {
       <Chat />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/software" element={<SoftwareServices />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/it-support" element={<ITSupport />} />
-        <Route path="/chat-support" element={<ChatSupport />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/services/software" element={<SoftwareServices />} />
+        <Route path="/services/product" element={<Product />} />
+        <Route path="/services/it-support" element={<ITSupport />} />
+        <Route path="/services/chat-support" element={<ChatSupport />} />
       </Routes>
     </div>
   );

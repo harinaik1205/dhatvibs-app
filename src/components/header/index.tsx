@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
+
 import MobileNavigation from "./MobileNavigation";
 import DesktopNavigation from "./DesktopNavigation";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -8,7 +9,7 @@ const Header = () => {
       <div className="h-full w-full md:max-w-3xl lg:max-w-7xl flex items-center justify-between px-6 md:px-12 mx-auto">
         {/* logo */}
         <Link to="/">
-          <h1 className="text-2xl font-bold text-blue-500">Dhatvibs</h1>
+          <h1 className="text-2xl font-bold text-blue-500">DhaTvi</h1>
         </Link>
 
         <MobileNavigation />

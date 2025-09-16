@@ -4,6 +4,7 @@ import { X } from "lucide-react";
 
 import SidebarLink from "./SidebarLink";
 import AccordionItem from "./AccordionItem";
+import { NAV_ITEMS } from "../../constants/data";
 
 interface SideBarProps {
   isOpen: boolean;
@@ -41,26 +42,25 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
             </button>
           </div>
 
-          <div className="h-[calc(100%-72px)] bg-blue-500 p-10">
-            <ul>
-              <SidebarLink to="/">Home</SidebarLink>
-
-              <AccordionItem
-                title="Our Services"
-                isActive={activeAccordion === "services"}
-                onToggle={() => toggleAccordion("services")}
-                items={[
-                  { id: "product", title: "Product" },
-                  { id: "software", title: "Software Services" },
-                  { id: "it", title: "IT Support" },
-                  { id: "chat", title: "Chat Support" },
-                ]}
-              />
-
-              <SidebarLink to="/about">About Us</SidebarLink>
-              <SidebarLink to="/contact">Contact Us</SidebarLink>
-            </ul>
-          </div>
+          <ul className="h-[calc(100%-72px)] bg-blue-500 p-10">
+            {NAV_ITEMS.map((navItem) => {
+              return navItem.items ? (
+                <AccordionItem
+                  key={navItem.label}
+                  label={navItem.label}
+                  items={navItem.items}
+                  onToggle={() => toggleAccordion(navItem.label)}
+                  isActive={activeAccordion === navItem.label}
+                />
+              ) : (
+                <SidebarLink
+                  key={navItem.path}
+                  path={navItem.path}
+                  label={navItem.label}
+                />
+              );
+            })}
+          </ul>
         </div>
       </div>
     </>
